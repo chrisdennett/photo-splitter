@@ -19,8 +19,8 @@ export const PhotoSplitter = () => {
   return (
     <div>
       <h2>PhotoSplitter</h2>
-      <PointsEditor />
-      <SplitCanvas img1={img1} img2={img2} points={points} />
+      <PointsEditor points={points} setPoints={setPoints} w={250} h={300} />
+      <SplitCanvas img1={img1} img2={img2} points={points} w={250} h={300} />
     </div>
   );
 };

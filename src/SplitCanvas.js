@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-export const SplitCanvas = ({ img1, img2, points }) => {
+export const SplitCanvas = ({ img1, img2, points, w, h }) => {
   const canvasRef = React.useRef(null);
 
   useEffect(() => {
     if (!img1 || !img2) return;
-    drawCanvas(canvasRef.current, img1, img2, 250, 300, points);
-  }, [img1, img2, points]);
+    drawCanvas(canvasRef.current, img1, img2, w, h, points);
+  }, [img1, img2, points, w, h]);
 
   return (
     <Container>
